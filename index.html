@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Ảnh Thẻ POly</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    
+    <div class="main">
+
+        <div class="left">
+            
+            <div class="inputmsv"> 
+                <label for="">Nhập mã Sv <input type="text" id="txtMsv">
+                </div></label>
+            <div class="rdo_coso" onchange="checkcs()">
+                    <div><label for="">Chọn cơ sở</label> <br>
+                        <label for=""><input type="radio" name="cs" checked value="ph/PH" > Hà Nội (PH) </label>
+                        <label for=""><input type="radio" name="cs" value="ps/PS"  > Hồ Chí Minh (PS) </label>
+                        <label for=""><input type="radio" name="cs" value="pd/PD"  > Đà Nẵng (PD) </label>
+                        <label for=""><input type="radio" name="cs" value="pc/PC"  > Cần Thơ  (PC) </label>
+                        <label for=""><input type="radio" name="cs" value="pt/PT"  > Tây Nguyên  (PT) </label>
+                        <br>
+                        <label for=""><input type="radio" name="cs" value="th/TH"  > Phổ Thông CD  (TH) </label>
+                        <label for=""><input type="radio" name="cs" value="null"  > Khác </label>
+
+                    </div>
+                </div> 
+        <div class="btn">
+            <button onclick="timkiem()">Tìm kiếm</button>
+            <button onclick="random()">Random</button>
+            <button onclick="next()">Next</button>
+            <button onclick="back()">Back</button>
+            <button onclick="auto()">Auto</button>
+            <button onclick="stop()">Stop</button>
+        </div>
+        </div>
+        <div class="right">
+            
+            <div class="img">
+                <img src="img/1.JPG" alt="Không tìm thấy ảnh thẻ" height="750px" id="anh">
+            </div>
+            <div class="mssvfpoly">
+                <h2 id="mssv">PH00000</h2>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
