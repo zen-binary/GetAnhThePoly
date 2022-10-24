@@ -9,6 +9,8 @@
         var hcm = document.getElementById("hcm");
         var cs='ph/PH';
         var ma='PH';
+
+        
        
         function checkcs(){
         
@@ -24,29 +26,23 @@
            ma = a.slice(3,5);
         //    mssv.innerText = ""+ma;           
         }
+    
 
         function auto() {
             index++;
             chkSo()
             mssv.innerText = ""+ma+index;
-            anh.src = "https://iap.poly.edu.vn/user/"+cs+index+".jpg";
+            
+            urlAnh(cs,index);
             t = setTimeout("auto()", 2000)
 
         }
         function timkiem() {
-            var a = txtmsv.value.replace(/[^0-9]/g, '');
-            
+            var a = txtmsv.value.replace(/[^0-9]/g, '');  
             var str =  a.trim();
             console.log(str);
-            if (str == 27953) {
-                anh.src = "img/2.JPG";
-                alert("Không có đâu bé à :))\nWeb ta tạo mà không lường trước à");
-                mssv.innerText = 'Tha cho em đi ạ';
-               
-                return;
-            }
             mssv.innerText = ""+ma+str;
-            anh.src = "https://iap.poly.edu.vn/user/"+cs+str+".jpg";
+            urlAnh(cs,str)
             index = str;
         
         }
@@ -54,14 +50,16 @@
             index++;
             chkSo()
             mssv.innerText = ""+ma+index;
-            anh.src = "https://iap.poly.edu.vn/user/"+cs+index+".jpg";
+            
+            urlAnh(cs,index)
             
         }
         function back() {
             index--;
             chkSo()
             mssv.innerText = ""+ma+index;
-            anh.src = "https://iap.poly.edu.vn/user/"+cs+index+".jpg";
+            
+            urlAnh(cs,index)
             
         }
         function random() {
@@ -70,7 +68,9 @@
             index=random;
             chkSo()
             mssv.innerText = ""+ma+index;
-            anh.src = "https://iap.poly.edu.vn/user/"+cs+index+".jpg";
+            
+
+            urlAnh(cs,index)
             
         }
         function chkSo(){
@@ -92,16 +92,28 @@
                 console.log(index);
             }else if (leg <= 4) {
                 var temp = index;
-                index = "0"+temp;
-                
+                index = "0"+temp;    
                 
             }
-            
             console.log(index);
         }
         //Stop
         function stop() {
             clearTimeout(t);
         }
+
+        function urlAnh(cs,index) {
+            if (index == 27953) {
+                anh.src = "img/2.JPG";
+                alert("Không có đâu bé à :))\nWeb ta tạo mà không lường trước à");
+                mssv.innerText = 'Tha cho em đi ạ';
+                return;
+            }
+            anh.src = "https://iap.poly.edu.vn/user/"+cs+index+".jpg";
+            
+
+        }
+
+
 
         
