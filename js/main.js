@@ -109,7 +109,7 @@
                 mssv.innerText = 'Tha cho em đi ạ';
                 return;
             }
-            anh.src = "../data/"+cs+index+".jpg";
+            anh.src = "/data/"+cs+index+".jpg";
             
 
         }
